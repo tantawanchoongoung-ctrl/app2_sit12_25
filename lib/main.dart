@@ -40,7 +40,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      // 1. AppBar
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
@@ -103,8 +102,6 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                 
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Column(
