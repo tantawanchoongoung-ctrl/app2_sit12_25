@@ -54,7 +54,6 @@ class HomePage extends StatelessWidget {
         ],
       ),
 
-     body: SingleChildScrollView > Column
       body: SingleChildScrollView(
         child: Column(
           children: [
