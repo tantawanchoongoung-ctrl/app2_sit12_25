@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  // ส่วนแสดงสถิติ 1 ช่อง (ตัวเลข + ป้ายชื่อ)
   Widget buildStat(String number, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -52,7 +51,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
 
-      // 2-6 อยู่ใน body: SingleChildScrollView > Column
+     body: SingleChildScrollView > Column
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -60,7 +59,7 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                  // 2. ส่วนหัวโปรไฟล์: รูปซ้าย สถิติ 3 ช่องขวา
+                  
                   Row(
                     children: [
                       const CircleAvatar(
@@ -81,7 +80,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // 3. ชื่อและแคปชั่น (ชิดซ้าย)
+                 
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Column(
@@ -102,7 +101,6 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // 4. ปุ่ม: ติดตาม + ข้อความ แบ่งครึ่งเท่ากัน
                   Row(
                     children: [
                       Expanded(
@@ -122,7 +120,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // 5. แถบไอคอน
+                 
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -135,7 +133,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            // 6. แกลเลอรีภาพ 3 คอลัมน์ (เต็มความกว้างหน้าจอ)
+          
             GridView.count(
               crossAxisCount: 3,
               shrinkWrap: true,
