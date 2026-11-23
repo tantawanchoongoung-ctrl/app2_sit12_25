@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
       ),
       home: const HomePage(),
@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
   // ส่วนแสดงสถิติ 1 ช่อง (ตัวเลข + ป้ายชื่อ)
   Widget buildStat(String number, String label) {
     return Column(
+
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
@@ -39,11 +40,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       // 1. AppBar
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text(
           'thantawan_sun',
-          style: TextStyle(fontWeight: FontWeight.w500),
+          style: TextStyle(fontWeight: FontWeight.w500,color:Colors.white),
         ),
         centerTitle: false,
         actions: const [
@@ -67,13 +70,35 @@ class HomePage extends StatelessWidget {
                         radius: 55,
                         backgroundImage: AssetImage('assets/รูป.jpg'),
                       ),
+                      const SizedBox(width: 16,),
                       Expanded(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            buildStat('3', 'โพสต์'),
-                            buildStat('146', 'ผู้ติดตาม'),
-                            buildStat('1,213', 'กำลังติดตาม'),
+                          children: const [
+                             Column(
+                               children: [
+                                 Text('3',
+                                 style: TextStyle(
+                                   fontWeight: FontWeight.bold,fontSize: 18,color: Colors.white)),
+                                  Text('โพสต์',style: TextStyle(color: Colors.white),)
+                               ],
+                             ),
+                            Column(
+                              children: [
+                                Text('146',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,fontSize: 18,color: Colors.white)),
+                                Text('ผู้ติดตาม',style: TextStyle(color: Colors.white),)
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text('1,213',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,fontSize: 18,color: Colors.white)),
+                                Text('กำลังติดตาม',style: TextStyle(color: Colors.white),)
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -91,12 +116,12 @@ class HomePage extends StatelessWidget {
                           'ทันตะวัน ชุนกวง',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                            fontSize: 16,color:Colors.white
                           ),
                         ),
                         SizedBox(height: 4),
-                        Text('นักศึกษาแผนกเทคโนโลยีสารสนเทศ'),
-                        Text('หลงใหลในการเขียน Flutter 💙'),
+                        Text('นักศึกษาแผนกเทคโนโลยีสารสนเทศ',style: TextStyle(color:Colors.white)),
+                        Text('หลงใหลในการเขียน Flutter 💙',style: TextStyle(color:Colors.white)),
                       ],
                     ),
                   ),
@@ -115,7 +140,7 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         child: OutlinedButton(
                           onPressed: () {},
-                          child: const Text('ข้อความ'),
+                          child: const Text('ข้อความ',style: TextStyle(color:Colors.white)),
                         ),
                       ),
                     ],
