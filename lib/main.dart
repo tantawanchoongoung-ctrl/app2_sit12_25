@@ -145,8 +145,8 @@ class HomePage extends StatelessWidget {
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.grid_on, size: 28),
-                      Icon(Icons.person_pin, size: 28),
+                      Icon(Icons.grid_on, size: 28,color: Colors.white,),
+                      Icon(Icons.person_pin, size: 28,color: Colors.white),
                     ],
                   ),
                   const SizedBox(height: 8),
